@@ -1,0 +1,33 @@
+// Skeleton loading frame
+.skeleton-products {
+  display: grid;
+  grid-gap: $base-padding;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  padding: $base-padding;
+
+  > * {
+    height: 16rem;
+    background-color: rgba(200,200,200,0.2);
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+
+    &:after {
+      content: '';
+      animation: skeletonLoading 1s linear infinite;
+      animation-fill-mode: forwards;
+      background: linear-gradient(to right, rgba(255,255,255,0) 8%, rgba(255,255,255,0.5) 18%, rgba(255,255,255,0) 33%);
+      background-size: 900px 100%;
+      height: inherit;
+      position: relative;
+      z-index: 10;
+      display: block;
+    }
+  }
+}
+
+@keyframes skeletonLoading{
+  0% { background-position: -500px 0 }
+  100%{ background-position: 500px 0 }
+}

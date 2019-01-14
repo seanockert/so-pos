@@ -1,0 +1,47 @@
+$base-padding: 0.75rem;
+$border-radius: 0.4rem;
+$color-lightest-grey: #f6f9fc;
+$color-light-grey: #e6ebf1;
+$color-grey-blue: #525f7f;
+$color-green: #00bc6f;
+$color-green-gradient: linear-gradient(to right, #00bc6f, #01d880);
+$color-red: #E93F33;
+$color-text: #222;
+$box-shadow: 0 2px 0 rgba(90, 97, 105, 0.11), 0 4px 8px rgba(90, 97, 105, 0.12), 0 10px 10px rgba(90, 97, 105, 0.06), 0 7px 70px rgba(90, 97, 105, 0.1);
+
+@mixin button($color, $bg) {
+	background: $bg;
+	border: none;
+	border-radius: $border-radius;
+	color: $color;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;    
+  margin: 0;
+  padding: $base-padding * 2;
+  width: 100%;
+
+  &:hover, 
+  &:focus {
+  	background-color: darken($bg, 10%);
+  }
+
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &:active {
+  	background-color: darken($bg, 20%);
+  	transform: scale(0.95);
+  }
+
+  &:disabled {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+
+    &:hover, 
+    &:focus {
+      background-color: $bg;
+    }
+  }
+}
