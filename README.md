@@ -9,7 +9,7 @@ Very work-in-progress. Not much except some UI at the moment.
 ## Demo
 https://so-pos.surge.sh
 
-##TODO: 
+## TODO: 
 
 - Routing
 - Proper backend
